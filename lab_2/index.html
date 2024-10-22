@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завантаження файлу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="file"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Завантаження файлу</h1>
+        <form action="process.php" method="post" enctype="multipart/form-data">
+            <label for="file">Оберіть файл для завантаження:</label>
+            <input type="file" name="file" id="file" required>
+            <button type="submit">Завантажити</button>
+        </form>
+
+        <h2>Додати текст у файл log.txt</h2>
+        <form action="text.php" method="post">
+            <label for="logText">Введіть текст:</label>
+            <textarea name="logText" id="logText" rows="4" cols="50" required></textarea>
+            <button type="submit">Записати в файл</button>
+        </form>
+
+        <h2>Список файлів</h2>
+        <a href="list.php">Переглянути список завантажених файлів</a>
+    </div>
+</body>
+</html>
