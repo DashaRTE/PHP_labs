@@ -1,0 +1,139 @@
+/* Общие стили */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Заголовок */
+.header {
+	background: #b30000;
+	padding: 20px;
+	text-align: center;
+	color: white;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Основной контент */
+.main-content {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.form-section {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 500px;
+}
+
+.form-section h2 {
+	text-align: center;
+	font-size: 22px;
+	color: #b30000;
+	margin-bottom: 20px;
+}
+
+.form-row {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #555;
+}
+
+input,
+select {
+	width: 100%;
+	padding: 12px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background: #f9f9f9;
+	transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+	border-color: #b30000;
+	outline: none;
+}
+
+.radio-group {
+	display: flex;
+	gap: 10px;
+}
+
+.radio-group label {
+	font-size: 14px;
+}
+
+button.btn-submit {
+	width: 100%;
+	padding: 12px;
+	font-size: 16px;
+	color: white;
+	background: #b30000;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+button.btn-submit:hover {
+	background: #003d80;
+}
+
+/* Подсказки */
+.suggestions {
+	list-style: none;
+	margin-top: 5px;
+	padding: 0;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background: white;
+	max-height: 150px;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+}
+
+.suggestions li {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.suggestions li:hover {
+	background: #f0f0f0;
+}
+
+/* Футер */
+.footer {
+	text-align: center;
+	padding: 15px;
+	background: #b30000;
+	color: white;
+	font-size: 14px;
+}
